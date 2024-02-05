@@ -1,0 +1,102 @@
+body {
+    background-image: url('/img/background.png');
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+
+table,
+th {
+    margin: auto;
+    /* border: 6px solid; */
+    /* border-color: rgba(255, 235, 205, 0.322); */
+}
+
+.box {
+    color: aliceblue;
+    /* text-align: center; */
+    /* display: block; */
+    width: auto;
+    background-color: rgb(49, 49, 49);
+}
+
+td {
+    /* border: 1px dotted; */
+    margin: auto;
+    border: 3px solid;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    height: 70px;
+    width: 70px;
+    background-color: blanchedalmond;
+    font-weight: bolder;
+    font-size: 22px;
+    text-align: center;
+    transition: bottom 0.5s ease-out;
+    display: table-cell;
+    visibility: visible;
+}
+
+td:hover {
+    background-color: rgb(56, 56, 56);
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+/* td:active {
+    background-color: rgb(44, 173, 77);
+    animation: popAnimation 0.3s ease-out forwards; */
+
+/* } */
+
+
+@keyframes popAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0);
+        visibility: hidden;
+    }
+}
+
+.cell.pop {
+    background-color: rgb(44, 173, 77);
+    animation: popAnimation 0.3s ease-out forwards;
+
+    /* visibility: hidden; */
+}
+
+.cell.wrong {
+    color: red;
+    animation: horizontalShaking 0.3s;
+}
+
+@keyframes horizontalShaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(5px)
+    }
+
+    50% {
+        transform: translateX(-5px)
+    }
+
+    75% {
+        transform: translateX(5px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
